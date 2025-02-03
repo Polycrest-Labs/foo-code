@@ -1,5 +1,15 @@
 # Roo Code Changelog
 
+## [3.3.9]
+
+- Add o3-mini-high and o3-mini-low
+
+## [3.3.8]
+
+- Fix o3-mini in the Glama provider (thanks @Punkpeye!)
+- Add the option to omit instructions for creating MCP servers from the system prompt (thanks @samhvw8!)
+- Fix a bug where renaming API profiles without actually changing the name would delete them (thanks @samhvw8!)
+
 ## [3.3.7]
 
 - Support for o3-mini (thanks @shpigunov!)

@@ -80,6 +80,7 @@ export interface ModelInfo {
 	cacheWritesPrice?: number
 	cacheReadsPrice?: number
 	description?: string
+	reasoningEffort?: "low" | "medium" | "high"
 }
 
 // Anthropic
@@ -517,6 +518,25 @@ export const openAiNativeModels = {
 		supportsPromptCache: false,
 		inputPrice: 1.1,
 		outputPrice: 4.4,
+		reasoningEffort: "medium",
+	},
+	"o3-mini-high": {
+		maxTokens: 100_000,
+		contextWindow: 200_000,
+		supportsImages: false,
+		supportsPromptCache: false,
+		inputPrice: 1.1,
+		outputPrice: 4.4,
+		reasoningEffort: "high",
+	},
+	"o3-mini-low": {
+		maxTokens: 100_000,
+		contextWindow: 200_000,
+		supportsImages: false,
+		supportsPromptCache: false,
+		inputPrice: 1.1,
+		outputPrice: 4.4,
+		reasoningEffort: "low",
 	},
 	o1: {
 		maxTokens: 100_000,
@@ -539,8 +559,8 @@ export const openAiNativeModels = {
 		contextWindow: 128_000,
 		supportsImages: true,
 		supportsPromptCache: false,
-		inputPrice: 3,
-		outputPrice: 12,
+		inputPrice: 1.1,
+		outputPrice: 4.4,
 	},
 	"gpt-4o": {
 		maxTokens: 4_096,
